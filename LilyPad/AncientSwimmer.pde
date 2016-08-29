@@ -19,7 +19,7 @@ float L = n/8., St = 0.4; // chord length, Strouhal number
 float t = 0;              // time
  
 void setup(){
-  size(1000,500);                                     // display window size
+ 
   Window view = new Window(n,n/2);                    // mapping from grid to display
   plesiosaur = new AncientSwimmer(1.25*L,n/4,L,3*L,   // define the geometry...
                                   1.75*PI,St,view);   //    and motion
@@ -48,6 +48,12 @@ void draw(){
   }
 }
 *******************************************************/
+
+void settings() {
+  size((int)(3* n), (int)(3*n/2) );//can have variables this way, or choose full screen
+  // fullScreen( SPAN);
+}
+
 
 class AncientSwimmer extends BodyUnion{
   float x0,y0,L,s,lead,St,pamp;
